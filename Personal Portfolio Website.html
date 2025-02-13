@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Shah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"> <!-- Add beautiful font -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #063858;
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .navbar a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.5s;
+            transform: translateY(-50%) rotate(25deg);
+        }
+        .navbar a:hover::before {
+            left: 100%;
+        }
+        .title {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            animation: slide-in 1s ease-out;
+        }
+        @keyframes slide-in {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .main {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bio {
+            max-width: 600px;
+            margin: 0 20px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in;
+        }
+        .bio h2 {
+            margin-top: 0;
+            animation: fadeIn 2s ease-in;
+        }
+        .bio p {
+            line-height: 1.6;
+            animation: fadeIn 2.5s ease-in;
+        }
+        .navy-image {
+            max-width: 350px;
+            height: 335px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+            animation: float 3s infinite;
+        }
+        @keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+            50% {
+                transform: translatey(-10px);
+            }
+            100% {
+                transform: translatey(0px);
+            }
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .details-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #03263c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .details-button:hover {
+            background-color: #084358;
+        }
+        .details {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+    </style>
+    <script>
+        function toggleDetails() {
+            var details = document.getElementById('details');
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="title">Aman Shah</h1>
+        <div>
+            <a href="aman_shah_pictures.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="bio">
+            <h2> Aman Shah</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat expedita sit illum neque dolores nisi a officia! Quas id non quisquam facere! Veniam obcaecati error quia quisquam optio est sequi qui laudantium repellendus, mollitia esse unde atque. Placeat recusandae, dicta nihil id veniam porro rem nesciunt. Quidem, mollitia? Molestiae obcaecati soluta incidunt repudiandae aut, possimus provident voluptatum ab voluptas animi, assumenda ut dolorem dolorum non aspernatur beatae nisi impedit laudantium? Minima iure, voluptatibus, reprehenderit aliquid, quidem tempora ipsam aliquam voluptates possimus quas harum fugiat. Quibusdam aut laboriosam repudiandae odio modi quae, delectus ipsum quos eos sed beatae vero pariatur eligendi..</p>
+            <p>Apart from his role in the merchant navy, Aman is also a very famous influencer. He has a significant following on social media where he shares his experiences, travel adventures, and professional insights. His engaging content and charismatic personality have made him a beloved figure among his followers.</p>
+        </div>
+        <img src="/Screenshot 2024-11-29 213702.png" alt="Merchant Navy" class="navy-image"> <!-- Add your image source here -->
+    </div>
+    <div class="button-container">
+        <button class="details-button" onclick="toggleDetails()">Show Details</button>
+    </div>
+    <div class="details" id="details">
+        <p><strong>Full Name:</strong> Aman Shah</p>
+        <p><strong>Address:</strong> 123 Merchant Navy Lane, Delhi, India</p>
+        <p><strong>Instagram ID:</strong> <a href="https://www.instagram.com/amanshah">amanshah.10</a></p>
+        <p><strong>Twitter:</strong> <a href="https://www.twitter.com/amanshah">@amanshah</a></p>
+        <p><strong>Email:</strong> <a href="mailto:amanshah@example.com">amanshah@example.com</a></p>
+    </div>
+</body>
+</html>
